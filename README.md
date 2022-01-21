@@ -151,9 +151,12 @@ Position and value both correct : green
 
 Position and value both wrong : red.
 
-As the guesses come, we need an entry key-board with the operators and numbers 0-9 displayed
+***As the guesses come, we need an entry key-board with the operators and numbers 0-9 displayed
 with the colours changing as feedback is obtained on the presence/absence of the number and
-operator.
+operator.***
+
+## Breaking up the problem into its component parts
+1. 
 
 
 
