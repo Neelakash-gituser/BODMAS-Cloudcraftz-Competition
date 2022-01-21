@@ -2,6 +2,15 @@
 This is first in the CloudCraftz internal competition series designed to help employees hone their
 end-to-end development and deployment skills with a focus on algorithm design.
 
+## You can try this game out in your local computer 
+- Just clone the repo using: `git clone https://github.com/Neelakash-gituser/BODMAS-Cloudcraftz-Competiton.git`
+- Then open your terminal and enter: `python3 BODMAS.py`
+
+### Screenshots of the game:
+![gameply](https://github.com/Neelakash-gituser/BODMAS-Cloudcraftz-Competiton/blob/master/Screenshot%20from%202022-01-21%2015-36-31.png)
+
+
+
 ## Round 1 
 - Breaking up the problem into its component parts
 - High level design
