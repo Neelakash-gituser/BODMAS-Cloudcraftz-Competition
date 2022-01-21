@@ -1,5 +1,7 @@
 import numpy as np
 
+
+# This is the class which generates the random equation along with the random number i.e. N4 .
 class Solution:
 
     def new_problem(self):
@@ -22,8 +24,8 @@ class BODMAS:
     operator_stack = ['-', '+', '*', '/']
     operands = [i for i in range(10)]
 
-    # Overloaded Constructor
-    def __init__(self, N1, O1, N2, O2, N3, opt_N1, opt_O1, opt_N2, opt_O2, opt_N3, opt_N4, i):
+    # Default Constructor
+    def __init__(self, N1, O1, N2, O2, N3, opt_N1, opt_O1, opt_N2, opt_O2, opt_N3, opt_N4, i, n):
         self.N1 = N1
         self.N2 = N2
         self.N3 = N3 
@@ -36,6 +38,7 @@ class BODMAS:
         self.opt_O1 = opt_O1
         self.opt_O2 = opt_O2
         self.i = i
+        self.n = n
 
         # check whether the input is valid or not 
         self.check_input()
@@ -81,7 +84,7 @@ class BODMAS:
             else:
                 self.check_positions()
 
-
+    # checks for the positions of the entered values and gives a feedback .
     def check_positions(self):
         
         red, yellow, green = [], [], []
@@ -138,7 +141,7 @@ class BODMAS:
         if len(green) == 5:
             print("Congratulations !!! You've successfully guessed the right equation.")
             quit()
-        if self.i == 2:
+        if self.i == n-1:
             print("You've exhausted all your chances, better luck next time\n")
             print(f"Original equation was - {str(self.opt_N1) + self.opt_O1 + str(self.opt_N2) + self.opt_O2 + str(self.opt_N3)}")
 
@@ -151,14 +154,18 @@ A, B, C, D, E, F = obj.new_problem()
 
 print("The magical number is: {}\n".format(F))
 
-for i in range(3):
-    if i == 2:
+# Number of guesses permitted
+n = 3 
+
+# loops until the players have exhausted all their chances or they've guessed it correctly whichever comes first.
+for i in range(n):
+    if i == n-1:
         print("This is your final try !!!")
 
     N1, N2, N3 = map(int, input('Enter N1, N2, N3 in the given order: ').split())
     O1, O2 = input('Enter O1 and O2 respectively: ').split()
 
-    obj_new = BODMAS(N1, O1, N2, O2, N3, A, B, C, D, E, F, i)
+    obj_new = BODMAS(N1, O1, N2, O2, N3, A, B, C, D, E, F, i, n)
     print("\n")
 
 
