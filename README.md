@@ -155,8 +155,6 @@ Position and value both wrong : red.
 with the colours changing as feedback is obtained on the presence/absence of the number and
 operator.***
 
-## Breaking up the problem into its component parts
-1. 
 
 
 
