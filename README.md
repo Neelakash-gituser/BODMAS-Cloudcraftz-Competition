@@ -3,17 +3,17 @@ This is first in the CloudCraftz internal competition series designed to help em
 end-to-end development and deployment skills with a focus on algorithm design.
 
 ## Round 1 
-a .Breaking up the problem into its component parts
-b. High level design
-c. Algorithm design
-d. Language Choice
-e. Web deployment choice
+- a .Breaking up the problem into its component parts
+- b. High level design
+- c. Algorithm design
+- d. Language Choice
+- e. Web deployment choice
 
 ## Round 2
-a. Gameplay
-b. UI
-c. Web deployment
-d. Documentation and Testing
+- a. Gameplay
+- b. UI
+- c. Web deployment
+- d. Documentation and Testing
 
 ## The problem Statement
 
@@ -40,11 +40,13 @@ In playing the game, N4 is given to the player at the beginning of the game.
 **Example 1) Consider the true equation as 6 + 5 x 7 = 41**
 The player to start of with only has 41 to start with. As a simple example, the player could start with
 various alternatives:
+
 5 x 9 - 4 = 41
 8 X 5 + 1 = 41
 4 X 9 + 5 = 41
 6 x 6 + 5 = 41
 6 + 5 x 7 = 41
+
 (many other feasible solutions exist)
 
 Let us assume we give a player 3 guesses in maximum.
