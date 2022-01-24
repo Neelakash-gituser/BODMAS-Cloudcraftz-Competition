@@ -1,6 +1,5 @@
 import numpy as np
 
-
 # This is the class which generates the random equation along with the random output i.e. N4 .
 class Solution:
 
