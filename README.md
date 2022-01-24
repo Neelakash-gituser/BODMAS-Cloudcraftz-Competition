@@ -27,7 +27,7 @@ end-to-end development and deployment skills with a focus on algorithm design.
     - define function **new_problems()**
       - randomly assign values to *opt_N1*, *opt_N2* and *opt_N3* in the value range of (0-9)
       - randomly assign operators to *opt_O1* and *opt_O2* from [+, -, *, /]
-      - evaluate **opt_N1 opt_O1 opt_N2 opt_O2 opt_N3** to obtain *opt_N4* 
+      - evaluate **opt_N1  opt_O1  opt_N2  opt_O2  opt_N3** to obtain *opt_N4* 
       - return **(opt_N1, opt_O1, opt_N2, opt_O2, opt_N3)**
 
 2. Create class **BODMAS**
