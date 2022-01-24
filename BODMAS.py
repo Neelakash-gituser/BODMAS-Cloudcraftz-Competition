@@ -1,7 +1,7 @@
 import numpy as np
 
 
-# This is the class which generates the random equation along with the random number i.e. N4 .
+# This is the class which generates the random equation along with the random output i.e. N4 .
 class Solution:
 
     def new_problem(self):
@@ -24,7 +24,7 @@ class BODMAS:
     operator_stack = ['-', '+', '*', '/']
     operands = [i for i in range(10)]
 
-    # Default Constructor
+    # default Constructor
     def __init__(self, N1, O1, N2, O2, N3, opt_N1, opt_O1, opt_N2, opt_O2, opt_N3, opt_N4, i, n):
         self.N1 = N1
         self.N2 = N2
@@ -44,6 +44,7 @@ class BODMAS:
         self.check_input()
 
 
+    # function calculating the output of the equation entered by the user.
     def _cal_value(self):
         flag = 0
 
@@ -88,6 +89,7 @@ class BODMAS:
     def check_positions(self):
         
         red, yellow, green = [], [], []
+        blank = " "
 
         print(f'Your entered equation is : {self.N1} {self.O1} {self.N2} {self.O2} {self.N3}')
         your_eq = [self.opt_N1, self.opt_O1, self.opt_N2, self.opt_O2, self.opt_N3]
@@ -139,11 +141,11 @@ class BODMAS:
         print(f"Red - {red}\nYellow - {yellow}\nGreen - {green}")
 
         if len(green) == 5:
-            print("Congratulations !!! You've successfully guessed the right equation.")
+            print("\nCongratulations !!! You've successfully guessed the right equation.")
             quit()
         if self.i == n-1:
-            print("You've exhausted all your chances, better luck next time\n")
-            print(f"Original equation was - {str(self.opt_N1) + self.opt_O1 + str(self.opt_N2) + self.opt_O2 + str(self.opt_N3)}")
+            print("\nYou've exhausted all your chances, better luck next time\n")
+            print(f"Original equation was - {str(self.opt_N1) + blank + self.opt_O1 + blank + str(self.opt_N2) + blank + self.opt_O2 + blank + str(self.opt_N3)}")
 
             
 
@@ -160,7 +162,7 @@ n = 3
 # loops until the players have exhausted all their chances or they've guessed it correctly whichever comes first.
 for i in range(n):
     if i == n-1:
-        print("This is your final try !!!")
+        print("This is your final try !!!\n")
 
     N1, N2, N3 = map(int, input('Enter N1, N2, N3 in the given order: ').split())
     O1, O2 = input('Enter O1 and O2 respectively: ').split()
