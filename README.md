@@ -35,26 +35,38 @@ end-to-end development and deployment skills with a focus on algorithm design.
     - define function **check_input()**
       - set or initialise actual = True 
       - if *O1* not in operator_stack or *O2* not in operator_stack:
+
             print("An operator must be among one of these - '+', '-', '*', '/'")
+
             actual = False
       - else if *N1* not in operands_list or *N2* not in operands_list or *N3* not in operands_list:
+
             print("Not a valid operand - operands must be between 0-9")
+
             actual = False
       - if actual == True
+
             val = call function **cal_value()**
-            if val not equal to opt_N4:
+
+            - if val not equal to opt_N4:
+
                 print("Your RHS not equal to your LHS")
-            else:
+            - else:
+
                 call function **check_positions()**
 
     - define function **cal_value()**
       - initialize flag to 0
       - if operator_stack.indexof(O2) > operator_stack.indexof(O1):
+
             im = string(N2) + O2 + string(self.N3)   [string concatenation]
+
             temp = evaluate(im)  [evaluating the above string equation as a mathematical equation]
       - else:
             im = string(N1) + O1 + string(N2)
+
             temp = eval(im)
+            
             set flag = 1 
 
         *Calculating the total equation* .
