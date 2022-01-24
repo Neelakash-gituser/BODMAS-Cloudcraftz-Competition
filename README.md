@@ -25,33 +25,33 @@ end-to-end development and deployment skills with a focus on algorithm design.
 
 1. Create class **Solution**
     - define function **new_problems()**
-      - randomly assign values to *opt_N1*, *opt_N2* and *opt_N3* in the value range of (0-9)
-      - randomly assign operators to *opt_O1* and *opt_O2* from [+, -, *, /]
-      - evaluate **opt_N1  opt_O1  opt_N2  opt_O2  opt_N3** to obtain *opt_N4* 
+      - randomly assign values to **opt_N1**, **opt_N2** and **opt_N3** in the value range of (0-9)
+      - randomly assign operators to **opt_O1** and **opt_O2** from [+, -, *, /]
+      - evaluate **opt_N1  opt_O1  opt_N2  opt_O2  opt_N3** to obtain **opt_N4**
       - return **(opt_N1, opt_O1, opt_N2, opt_O2, opt_N3)**
 
 2. Create class **BODMAS**
     - set operator_stack and operands_list.
-    - define constructor with (N1, O1, N2, O2, N3, opt_N1, opt_O1, opt_N2, opt_O2, opt_N3, opt_N4, i, n)
+    - define constructor with ARGUMENTS **(N1, O1, N2, O2, N3, opt_N1, opt_O1, opt_N2, opt_O2, opt_N3, opt_N4, i, n)**
       - call function **check_input()** inside constructor, for checking user input.
     
     - define function **check_input()**
-      - set or initialise *actual* = True 
-      - if *O1* not in operator_stack or *O2* not in operator_stack:
+      - set or initialise **actual** = True 
+      - if **O1** not in operator_stack or **O2** not in operator_stack:
 
             print("An operator must be among one of these - '+', '-', '*', '/'")
 
-            *actual* = False
-      - else if *N1* not in operands_list or *N2* not in operands_list or *N3* not in operands_list:
+            **actual** = False
+      - else if **N1** not in operands_list or **N2** not in operands_list or **N3** not in operands_list:
 
             print("Not a valid operand - operands must be between 0-9")
 
-            *actual* = False
-      - if *actual* == True
+            **actual** = False
+      - if **actual** == True
 
-            *val* = call function **cal_value()**
+            **val** = call function **cal_value()**
 
-            - if *val* not equal to opt_N4:
+            - if **val** not equal to opt_N4:
 
                 print("Your RHS not equal to your LHS")
             - else:
