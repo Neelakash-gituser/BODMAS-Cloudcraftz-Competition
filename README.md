@@ -89,25 +89,26 @@ end-to-end development and deployment skills with a focus on algorithm design.
       - check if **N1**, **N2**, **N3**, **O1**, **O2** are in **your_eq**
         - if not in *your_eq*:
           
-          append it to *red* array
+            append it to *red* array
         - if in *your_eq*:
           - check if it's in same position as computer generated equation.
             - if in same position:
 
-              append to *green* array
+                append to *green* array
             - else:
 
-              append to *yellow* array
+                append to *yellow* array
       - if lenght of *green* array == 5:
 
-        print("Success")
+            print("Success")
 
-        terminate_program()
+            terminate_program()
       - if **i** == **n**-1:
         
-        print("All chance over")
+            print("All chance over")
 
-        show user the answer.
+            print(original equation).
+            
 3. Now finally create the **main()** function
     - create an object of class **Solution** and call function **new_problem**
     - Show received value of *N4* to player .
