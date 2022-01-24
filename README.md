@@ -59,6 +59,7 @@ O2 is an arithmetic operator It can be + - x / (add subtract multiply divide)
 In playing the game, N4 is given to the player at the beginning of the game.
 
 **Example 1) Consider the true equation as 6 + 5 x 7 = 41**
+
 The player to start of with only has 41 to start with. As a simple example, the player could start with
 various alternatives:
 
@@ -102,6 +103,7 @@ This leaves us with 0,2, 3,6 ,7,9. Through looking back at our original feasible
 that the only solution possible is: 6 + 5 x 7 = 41.
 
 **Example 2) Consider the following equation 2 + 2 + 2 = 6**
+
 The player only has 6 as initial information. Combinations could include
 
 6 + 1 – 1 = 6
