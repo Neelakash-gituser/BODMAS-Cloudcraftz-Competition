@@ -59,7 +59,7 @@ end-to-end development and deployment skills with a focus on algorithm design.
                 call function **check_positions()**
 
     - define function **cal_value()**
-      - initialize flag to 0
+      - initialize **flag** to 0
       - if operator_stack.indexof(O2) > operator_stack.indexof(O1):
 
             im = string(N2) + O2 + string(self.N3)   [string concatenation]
@@ -73,14 +73,14 @@ end-to-end development and deployment skills with a focus on algorithm design.
             set flag = 1 
 
         *Calculating the total equation* .
-      - if flag == 1:
+      - if **flag** == 1:
 
             res = evaluate(string(temp) + O2 + string(N3))
-      - else if flag == 0:
+      - else if **flag** == 0:
 
             res = evaluate(string(N1) + O1 + string(temp))
 
-        return *res*
+        return **res**
     
     - define function **check_positions()**
       - initialize three empty list or arrays, *red*, *yellow* and *green*
