@@ -41,17 +41,17 @@ end-to-end development and deployment skills with a focus on algorithm design.
 
             print("An operator must be among one of these - '+', '-', '*', '/'")
 
-            **actual** = False
+            actual = False
       - else if **N1** not in operands_list or **N2** not in operands_list or **N3** not in operands_list:
 
             print("Not a valid operand - operands must be between 0-9")
 
-            **actual** = False
+            actual = False
       - if **actual** == True
 
-            **val** = call function **cal_value()**
+            val = call function **cal_value()**
 
-            - if **val** not equal to opt_N4:
+            - if val not equal to opt_N4:
 
                 print("Your RHS not equal to your LHS")
             - else:
