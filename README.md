@@ -20,7 +20,51 @@ end-to-end development and deployment skills with a focus on algorithm design.
 5. But if all the positions are not matching we would be providing them with a feedback and will provide them with another chance to improve themselves. (Number of chances a player gets depends upon how many they are authorised to get.)
 
 ## Pseudo-Code for the above problem .
-1. 
+1. Create class **Solution**
+    - define function **new_problems()**
+      - randomly assign values to *N1*, *N2* and *N3* in the value range of (0-9)
+      - randomly assign operators to *O1*, *O2* and *O3* from **[+, -, *,/]**
+      - evaluate **N1 O1 N2 O2 N3** to obtain *N4* 
+      - return **(N1, N2, N3, O1, O2)**
+
+2. Create class **BODMAS**
+    - set operator_stack and operands_list.
+    - define constructor with (N1, O1, N2, O2, N3, opt_N1, opt_O1, opt_N2, opt_O2, opt_N3, opt_N4, i, n)
+      - call function **check_input()** inside constructor, for checking user input.
+    
+    - define function **check_input()**
+      - set or initialise actual = True 
+      - if *O1* not in operator_stack or *O2* not in operator_stack:
+            print("An operator must be among one of these - '+', '-', '*', '/'")
+            actual = False
+      - else if *N1* not in operands_list or *N2* not in operands_list or *N3* not in operands_list:
+            print("Not a valid operand - operands must be between 0-9")
+            actual = False
+      - if actual == True
+            val = call function **cal_value()**
+            if val not equal to opt_N4:
+                print("Your RHS not equal to your LHS")
+            else:
+                call function **check_positions()**
+
+    - define function **cal_value()**
+      - initialize flag to 0
+      - if operator_stack.indexof(O2) > operator_stack.indexof(O1):
+            im = string(N2) + O2 + string(self.N3)   [string concatenation]
+            temp = evaluate(im)  [evaluating the above string equation as a mathematical equation]
+      - else:
+            im = string(N1) + O1 + string(N2)
+            temp = eval(im)
+            set flag = 1 
+
+        *Calculating the total equation* .
+      - if flag == 1:
+            res = evaluate(string(temp) + O2 + string(N3))
+      - else if flag == 0:
+            res = evaluate(string(N1) + O1 + string(temp))
+
+        return res
+
 
 
 ## Round 1 
