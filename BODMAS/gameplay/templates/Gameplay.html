@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game is On</title>
+</head>
+<body>
+    <p>Your magical number is: {{context.N4}}</p>
+    <form action="yourturn" method="POST">{% csrf_token %}
+        N1 <input type="number" name="N1">
+        O1 <input type="text" name="O1">
+        N2 <input type="number" name="N2">
+        O2 <input type="text" name="O2">
+        N3 <input type="number" name="N3">
+        <button type="submit">SEND VALUES</button>
+    </form>
+</body>
+</html>
