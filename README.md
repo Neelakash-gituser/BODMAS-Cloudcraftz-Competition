@@ -2,6 +2,9 @@
 This is first in the CloudCraftz internal competition series designed to help employees hone their
 end-to-end development and deployment skills with a focus on algorithm design.
 
+### Note : 
+- The Web part of the application is under development .
+
 ## You can try this game out in your local computer 
 - Just clone the repo using: `git clone https://github.com/Neelakash-gituser/BODMAS-Cloudcraftz-Competition.git`
 - Then open your terminal and enter: `python3 BODMAS.py`
