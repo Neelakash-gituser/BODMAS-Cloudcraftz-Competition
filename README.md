@@ -7,7 +7,7 @@ end-to-end development and deployment skills with a focus on algorithm design.
 
 ## You can try this game out in your local computer 
 - Just clone the repo using: `git clone https://github.com/Neelakash-gituser/BODMAS-Cloudcraftz-Competition.git`
-- Then open your terminal and enter: `python3 BODMAS.py`
+- Then open your terminal and enter: `python3 Game.py`
 ### OR if you want you can play it directly using the `BODMAS.exe` 
 
 ### Screenshots of the game:
