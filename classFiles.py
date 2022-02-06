@@ -31,7 +31,14 @@ class Solution:
         return N1, O1, N2, O2, N3, N4
 
 
+# Resets when a new problem begins .
+class GlobalVals:
+    def reset(self):
+        global R, Y, G
+        R, Y, G = [], [], []
 
+
+# Main Class
 class BODMAS:
     """
     A mathematical game for geeks .
@@ -55,7 +62,6 @@ class BODMAS:
 
         # check whether the input is valid or not
         self.check_input()
-
 
     # function calculating the output of the equation entered by the user.
     def _cal_value(self):
@@ -105,54 +111,73 @@ class BODMAS:
         red, yellow, green = [], [], []
         blank = " "
 
-        print(f'Your entered equation is : {self.N1} {self.O1} {self.N2} {self.O2} {self.N3}')
+        print(f'\nYour entered equation is : {self.N1} {self.O1} {self.N2} {self.O2} {self.N3}\n')
         your_eq = [self.opt_N1, self.opt_O1, self.opt_N2, self.opt_O2, self.opt_N3]
 
         if self.N1 in your_eq:
             if self.N1 == self.opt_N1:
                 green.append(f"N1: {self.N1}")
+                G.append(self.N1)
             else:
                 yellow.append(f"N1: {self.N1}")
+                Y.append(self.N1)
         else:
             red.append(f"N1: {self.N1}")
+            R.append(self.N1)
 
 
         if self.N2 in your_eq:
             if self.N2 == self.opt_N2:
                 green.append(f"N2: {self.N2}")
+                G.append(self.N2)
             else:
                 yellow.append(f"N2: {self.N2}")
+                Y.append(self.N2)
         else:
             red.append(f"N2: {self.N2}")
+            R.append(self.N2)
 
 
         if self.N3 in your_eq:
             if self.N3 == self.opt_N3:
                 green.append(f"N3: {self.N3}")
+                G.append(self.N3)
             else:
                 yellow.append(f"N3: {self.N3}")
+                Y.append(self.N3)
         else:
             red.append(f"N3: {self.N3}")
+            R.append(self.N3)
 
 
         if self.O1 in your_eq:
             if self.O1 == self.opt_O1:
                 green.append(f"O1: {self.O1}")
+                G.append(self.O1)
             else:
                 yellow.append(f"O1: {self.O1}")
+                Y.append(self.O1)
         else:
             red.append(f"O1: {self.O1}")
+            R.append(self.O1)
 
 
         if self.O2 in your_eq:
             if self.O2 == self.opt_O2:
                 green.append(f"O2: {self.O2}")
+                G.append(self.O2)
             else:
                 yellow.append(f"O2: {self.O2}")
+                Y.append(self.O2)
         else:
             red.append(f"O2: {self.O2}")
+            R.append(self.O2)
 
-        print(f"Red - {red}\nYellow - {yellow}\nGreen - {green}")
+        dicts = {'RED': R, 'YELLOW': Y, 'GREEN': G}
+
+        print(f"Red - {red}\nYellow - {yellow}\nGreen - {green}\n")
+
+        print(f"The Global Signals :\n{dicts}")
 
         if len(green) == 5:
             print("\nCongratulations !!! You've successfully guessed the right equation.")

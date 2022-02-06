@@ -1,8 +1,12 @@
-from classFiles import BODMAS, Solution
+from classFiles import BODMAS, Solution, GlobalVals
 
 
 # The main body or the driver code:
 while True:
+
+    new_var = GlobalVals()
+    new_var.reset()
+
     print("\nNote: If you don't want the final answer that is R.H.S to be a negative number press - [Y/y]")
     print("Disallow Negative numbers as result ? [Y - Yes]\t")
     disallow = input('-> ').lower()
@@ -19,7 +23,6 @@ while True:
 
     print("The magical number is: {}\n".format(F))
     print("Input Format:\n1. Enter N1, N2, N3 each of them must be a single digit positive integer between 0 and 9.\n2. O1 and O2 are operators -> '+', '-', '*' or '/'\n")
-
 
     # loops until the players have exhausted all their chances or they've guessed it correctly whichever comes first.
     while True:
